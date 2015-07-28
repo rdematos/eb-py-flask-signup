@@ -1,0 +1,32 @@
+{
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ],
+      "command": [],
+      "environment": [
+        {
+          "name": "APP_CONFIG",
+          "value": "application.config.example"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [
+        "/uwsgi-start.sh"
+      ],
+      "links": null,
+      "mountPoints": [],
+      "memory": 1000,
+      "name": "flask-signup",
+      "cpu": 10,
+      "image": "rdematos/flask-signup:v_%BUILD_NUMBER%"
+    }
+  ],
+  "volumes": [],
+  "family": "flask-signup"
+}
